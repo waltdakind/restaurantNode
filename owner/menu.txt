@@ -1,2 +1,2 @@
-Spaghetti,10,Italian
-Pizza,5,Italian
+['Pizza','10','Italian']
+['Spaghetti','5','Italian']

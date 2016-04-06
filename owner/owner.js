@@ -29,6 +29,6 @@ prompt.get(['name', 'price', 'category'], function(err, result) {
 		console.log("Menu Item: " + menuItem.name);
 		console.log("Price: " + menuItem.price);
 		console.log("Category: " + menuItem.category);
-		appender(menuItem.name + ',' + menuItem.price + ',' + menuItem.category + '\n');
+		appender("['"+ menuItem.name + "','" + menuItem.price + "','" + menuItem.category + "']\n");
 	}
 })
