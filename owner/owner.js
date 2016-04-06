@@ -1,5 +1,18 @@
 // require the prompt module
 prompt = require('prompt');
+fs = require('fs');
+
+// menu file
+menu = "menu.txt";
+
+// append function
+function appender(str) {
+	fs.appendFile(menu, str, "utf8", function(err) {
+		if (!err) {
+			// callback would go here IF WE NEEDED IT
+		}
+	})
+}
 
 // item class
 var Item = function(name, price, category) {
@@ -16,5 +29,6 @@ prompt.get(['name', 'price', 'category'], function(err, result) {
 		console.log("Menu Item: " + menuItem.name);
 		console.log("Price: " + menuItem.price);
 		console.log("Category: " + menuItem.category);
+		appender(menuItem.name + ',' + menuItem.price + ',' + menuItem.category + '\n');
 	}
 })
