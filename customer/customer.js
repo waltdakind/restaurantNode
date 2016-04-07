@@ -78,7 +78,7 @@ function custOrder() {
       }
     }
     // if for loop ends and there's no item found, tell the user
-    console.log("Sorry, we don't serve " + order.item + ".")
+    console.log("Sorry, we don't serve " + order.item + ".\n---")
     // show menu and run cust order again
     displayMenu();
     custOrder();
