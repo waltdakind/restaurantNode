@@ -41,6 +41,16 @@ prompt.get(['customer', 'address', 'item','quantity'], function (err, result) {
 
   var order = new List(result.customer,result.address,result.item,result.quantity);
 
-  console.log('Customer Order:');
-  console.log(order);
+  // now reference array we made from menu.txt to calculate the order information
+
+  // for loop to find the right array
+  for (var i = 0; i < menuArr.length; i++) {
+    if (order.item.toLowerCase() === menuArr[i][0].toLowerCase()) {
+      console.log("Hi, " + order.name + "!");
+      console.log("You ordered " + order.quantity + " of the " + order.item);
+      console.log("That comes to $" + (order.quantity * menuArr[i][1]));
+      console.log("We'll arrive shortly to " + order.address + " with your food!")
+      console.log("See you soon!");
+    }
+  }
 });
