@@ -1,2 +1,3 @@
 ['Pizza','10','Italian']
 ['Spaghetti','5','Italian']
+['Taco','8','Mexican']
