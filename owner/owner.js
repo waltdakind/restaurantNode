@@ -15,20 +15,20 @@ function appender(str) {
 }
 
 // item class
-var Item = function(name, price, category) {
-	this.name = name;
+var Item = function(dish, price, category) {
+	this.dish = dish;
 	this.price = price;
 	this.category = category;
 }
 
 // prompt time
 prompt.start();
-prompt.get(['name', 'price', 'category'], function(err, result) {
+prompt.get(['dish', 'price', 'category'], function(err, result) {
 	if (!err) {
-		var menuItem = new Item(result.name, result.price, result.category);
-		console.log("Menu Item: " + menuItem.name);
+		var menuItem = new Item(result.dish, result.price, result.category);
+		console.log("Menu Item: " + menuItem.dish);
 		console.log("Price: " + menuItem.price);
 		console.log("Category: " + menuItem.category);
-		appender("['"+ menuItem.name + "','" + menuItem.price + "','" + menuItem.category + "']\n");
+		appender("['"+ menuItem.dish + "','" + menuItem.price + "','" + menuItem.category + "']\n");
 	}
 })
